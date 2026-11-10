@@ -1,3 +1,19 @@
-.testClass {
+body {
   color: blue;
+
+  header {
+    background-color: aqua;
+  }
+
+  main {
+    background-color: blueviolet;
+  }
+
+  footer {
+    background-color: cadetblue;
+  }
+  
+  &:hover {
+    color: black;
+  }
 }
