@@ -109,7 +109,6 @@ section {
 }
 
 .tag {
-  width: -moz-fit-content;
   width: fit-content;
   padding: 3px 12px;
   border-radius: 25px;
@@ -286,8 +285,7 @@ header nav a:hover,
   margin: 25px;
   border: 2px solid var(--tx-color);
   border-radius: 20px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 /* Initial animation */
@@ -371,7 +369,7 @@ header nav a:hover,
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 28%;
+  left: 27.9%;
   width: 2px;
   background: var(--accent-yellow);
 }
@@ -402,8 +400,7 @@ header nav a:hover,
 #works .timeline-media img {
   width: 100%;
   border-radius: 8px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 #works .timeline-content-wrapper {
   width: 70%;
@@ -620,10 +617,8 @@ footer svg {
     width: 100px;
     height: 160px;
     margin: 20px 0;
-    -o-object-fit: cover;
-       object-fit: cover;
-    -o-object-position: top;
-       object-position: top;
+    object-fit: cover;
+    object-position: top;
   }
   .hamburger {
     display: flex;
@@ -661,13 +656,17 @@ footer svg {
     flex-direction: column;
     gap: 0;
   }
-  #works .accordion::before,
+  #works .accordion::before {
+    left: 0%;
+  }
   #works .timeline-item::after {
-    display: none;
+    top: 202px;
+    left: 0.1%;
   }
   #works .timeline-item {
     flex-direction: column;
     gap: 15px;
+    padding-left: 15px;
   }
   #works .timeline-left,
   #works .timeline-content-wrapper {
@@ -684,4 +683,6 @@ footer svg {
   #home {
     padding-inline: 20px;
   }
-}/*# sourceMappingURL=styles.css.map */
+}
+
+/*# sourceMappingURL=styles.css.map */

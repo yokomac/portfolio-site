@@ -231,7 +231,7 @@ header nav a,
       position: absolute;
       top: 0;
       bottom: 0;
-      left: 28%;
+      left: 27.9%;
       width: 2px;
       background: var(--accent-yellow);
     }
@@ -569,14 +569,19 @@ footer {
   }
 
   #works {
-    .accordion::before,
+    .accordion::before {
+      left: 0%;
+    }
+
     .timeline-item::after {
-      display: none;
+      top: 202px;
+      left: 0.1%;
     }
 
     .timeline-item {
       flex-direction: column;
       gap: 15px;
+      padding-left: 15px;
     }
 
     .timeline-left,
