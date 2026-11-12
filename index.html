@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SCSS</title>
+  <title>Takuto Portfolio</title>
   <link rel="stylesheet" href="./src/css/styles.css">
   <script src="./src/js/script.js" defer></script>
   <link href="https://api.fontshare.com/v2/css?f[]=satoshi@700&display=swap" rel="stylesheet">
@@ -14,9 +14,20 @@
 <body>
   <header>
     <div class="name-container">
-      <img class="theme-icon" for="theme-icon" src="./src/images/icon.svg" alt="icon" />
+      <img class="theme-icon" src="./src/images/icon.svg" alt="icon" />
       <a class="myName" href="/">Takuto.Y</a>
     </div>
+
+    <nav class="navbar" id="navbar">
+      <ul>
+        <li><a href="#home" class="nav-link" data-color="red">Home</a></li>
+        <li><a href="#about" class="nav-link" data-color="blue">About</a></li>
+        <li><a href="#skills" class="nav-link" data-color="green">Skills</a></li>
+        <li><a href="#works" class="nav-link" data-color="yellow">Works</a></li>
+        <li><a href="#projects" class="nav-link" data-color="cyan">Projects</a></li>
+        <li><a href="#contact" class="nav-link" data-color="orange">Contact</a></li>
+      </ul>
+    </nav>
 
     <button
       id="menu-toggle"
@@ -30,17 +41,6 @@
       <span></span>
       <span></span>
     </button>
-
-    <nav class="navbar" id="navbar">
-      <ul>
-        <li><a href="#home" class="nav-link" data-color="red">Home</a></li>
-        <li><a href="#about" class="nav-link" data-color="blue">About</a></li>
-        <li><a href="#skills" class="nav-link" data-color="green">Skills</a></li>
-        <li><a href="#works" class="nav-link" data-color="yellow">Works</a></li>
-        <li><a href="#projects" class="nav-link" data-color="cyan">Projects</a></li>
-        <li><a href="#contact" class="nav-link" data-color="orange">Contact</a></li>
-      </ul>
-    </nav>
 
     <div class="theme-toggle">
       <button id="theme-toggle" type="button" aria-label="Switch to dark mode">
@@ -72,9 +72,15 @@
         <p>
           Availability: Part-time employment starting in November 2027.
         </p>
-        <a class="sns" href="https://github.com/yokomac">Github</a>
-        <a class="sns" href="https://www.linkedin.com/in/takuto-yokomaku-4873b0277/">LinkedIn</a>
-        <a class="sns" href="https://www.facebook.com/share/1RCKF3UEY8/">Facebook</a>
+        <a href="https://github.com/yokomac">
+          <img src="./src/images/github.svg" alt="github-link" class="sns">
+        </a>
+        <a href="https://www.linkedin.com/in/takuto-yokomaku-4873b0277/">
+          <img src="./src/images/linkedin.svg" alt="linkedin-link" class="sns">
+        </a>
+        <a href="https://www.facebook.com/share/1RCKF3UEY8/">
+          <img src="./src/images/facebook.svg" alt="facebook-link" class="sns">
+        </a>
       </div>
     </section>
 
@@ -599,17 +605,17 @@
 
   <footer>
     <div class="footerSns">
-      <a class="sns" href="https://github.com/yokomac" target="_blank" rel="noopener noreferrer">
-        Github
+      <a href="https://github.com/yokomac" target="_blank" rel="noopener noreferrer">
+        <img src="./src/images/github.svg" alt="github-link" class="sns-footer">
       </a>
-      <a class="sns" href="https://www.linkedin.com/in/takuto-yokomaku-4873b0277/" target="_blank" rel="noopener noreferrer">
-        LinkedIn
+      <a href="https://www.linkedin.com/in/takuto-yokomaku-4873b0277/" target="_blank" rel="noopener noreferrer">
+        <img src="./src/images/linkedin.svg" alt="github-link" class="sns-footer">
       </a>
-      <a class="sns" href="https://www.facebook.com/share/1RCKF3UEY8/">
-        Facebook
+      <a href="https://www.facebook.com/share/1RCKF3UEY8/">
+        <img src="./src/images/facebook.svg" alt="github-link" class="sns-footer">
       </a>
-      <a class="sns" href="https://bsky.app/profile/yokomac.bsky.social">
-        Bluesky
+      <a href="https://bsky.app/profile/yokomac.bsky.social">
+        <img src="./src/images/bluesky.svg" alt="github-link" class="sns-footer">
     </div>
     </a>
     <p>

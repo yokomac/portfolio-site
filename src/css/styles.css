@@ -178,6 +178,29 @@ header .scroll-track {
   height: 50px;
 }
 
+.theme-icon, .sns, .sns-footer {
+  transition: filter 0.3s ease;
+}
+
+.sns, .sns-footer {
+  margin-right: 30px;
+  text-decoration: none;
+  width: 25px;
+  height: 25px;
+}
+
+[data-theme=dark] .sns {
+  filter: invert(1);
+}
+
+[data-theme=dark] .theme-icon {
+  filter: invert(1);
+}
+
+[data-theme=light] .sns-footer {
+  filter: invert(1);
+}
+
 .name-container {
   display: flex;
   justify-content: center;
@@ -199,6 +222,31 @@ header nav a:hover,
 
 .hamburger {
   display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background: var(--tx-color);
+  transition: transform 0.3s ease, opacity 0.2s ease;
+}
+.hamburger.is-open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.hamburger.is-open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.is-open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 .navbar ul {
@@ -210,6 +258,26 @@ header nav a:hover,
 .nav-link {
   position: relative;
   padding-bottom: 7px;
+  color: var(--tx-color);
+  transition: color 0.3s ease, opacity 0.3s ease;
+}
+.nav-link[data-color=red].is-active {
+  color: var(--accent-red);
+}
+.nav-link[data-color=blue].is-active {
+  color: var(--accent-blue);
+}
+.nav-link[data-color=green].is-active {
+  color: var(--accent-green);
+}
+.nav-link[data-color=yellow].is-active {
+  color: var(--accent-yellow);
+}
+.nav-link[data-color=cyan].is-active {
+  color: var(--accent-cyan);
+}
+.nav-link[data-color=orange].is-active {
+  color: var(--accent-orange);
 }
 .nav-link::after {
   content: "";
@@ -219,9 +287,10 @@ header nav a:hover,
   width: 0;
   height: 2.5px;
   border-radius: 2px;
+  background-color: currentColor;
   transition: width 0.3s ease;
 }
-.nav-link:hover::after {
+.nav-link:hover::after, .nav-link.is-active::after {
   width: 100%;
 }
 
@@ -569,11 +638,6 @@ footer svg {
   fill: var(--bg-color);
 }
 
-.sns {
-  margin-right: 30px;
-  text-decoration: none;
-}
-
 .reveal {
   opacity: 0;
   transform: translateY(25px);
@@ -614,23 +678,14 @@ footer svg {
     grid-row: 2;
   }
   .selfy {
-    width: 100px;
-    height: 160px;
+    width: 140px;
+    height: 200px;
     margin: 20px 0;
     object-fit: cover;
     object-position: top;
   }
   .hamburger {
     display: flex;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-  }
-  .hamburger span {
-    width: 25px;
-    height: 3px;
-    background: var(--tx-color);
-    transition: transform 0.3s ease, opacity 0.3s ease;
   }
   .navbar {
     position: absolute;
