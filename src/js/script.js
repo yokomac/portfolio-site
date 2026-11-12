@@ -34,6 +34,38 @@ document.addEventListener("DOMContentLoaded", () => {
     setTheme(currentTheme === "dark" ? "light" : "dark");
   });
 
+  // =========================
+  // Active Navigation Link
+  // =========================
+
+  const sections = document.querySelectorAll("section[id]");
+  const navLinks = document.querySelectorAll(".nav-link");
+
+  const navObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+
+        const currentId = entry.target.id;
+
+        navLinks.forEach((link) => {
+          const isCurrent = link.getAttribute("href") === `#${currentId}`;
+
+          link.classList.toggle("is-active", isCurrent);
+        });
+      });
+    },
+    {
+      // Detect the section around the middle of the screen
+      rootMargin: "-30% 0px -60% 0px",
+      threshold: 0
+    }
+  );
+
+  sections.forEach((section) => {
+    navObserver.observe(section);
+  });
+
 
   // =========================
   // Mobile Navigation
@@ -45,6 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
   menuButton?.addEventListener("click", () => {
     const isOpen = navbar.classList.toggle("is-open");
 
+    menuButton.classList.toggle("is-open", isOpen);
     menuButton.setAttribute("aria-expanded", isOpen);
   });
 
