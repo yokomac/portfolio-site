@@ -5,10 +5,595 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SCSS</title>
   <link rel="stylesheet" href="css/styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <header>Header</header>
-  <main>Main</main>
-  <footer>Footer</footer>
+  <header>
+    <div class="name-container">
+      <img class="theme-icon" for="theme-icon" src="./images/icon.svg" alt="icon" />
+      <a class="myName" href="/">Takuto.Y</a>
+    </div>
+
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+    <label for="menu-toggle" class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <nav class="navbar">
+      <ul>
+        <li href="#home" class="nav-link" data-color="red">Home</li>
+        <li href="#about" class="nav-link" data-color="blue">About</li>
+        <li href="#skills" class="nav-link" data-color="green">Skills</li>
+        <li href="#works" class="nav-link" data-color="yellow">Works</li>
+        <li href="#projects" class="nav-link" data-color="cyan">Projects</li>
+        <li href="contact" class="nav-link" data-color="orange">Contact</li>
+        <div class="nav-underlaine"></div>
+      </ul>
+    </nav>
+
+    <div class="theme-toggle">
+      <input type="ratio" id="mode_dark" name="mode" value="dark">
+      <label for="mode_dark" aria-label="Switch to dark mode">
+        Dark
+      </label>
+
+      <input type="ratio" id="mode_light" name="mode" value="light">
+      <label for="mode_light" id="mode_light" name="mode" value="light">
+        Light
+      </label>
+    </div>
+  </header>
+
+  <main class="content">
+    <div class="scroll-track"></div>
+    <section id="home">
+      <div class="home-container1">
+        <p>Hi, I'm</p>
+        <h1 class="frame">Takuto</h1>
+        <h1 class="lname">Yokomaku</h1>
+        <div class="tag-container">
+          <span class="tag">Full-stack Developer</span>
+          <span class="tag">Graphic Designer</span>
+          </div>
+        </div>
+
+        <div class="home-container2">
+          <img src=".images/Selfy.JPG" class="selfy" alt="self-portraits">
+        </div>
+        <div class="home-container3">
+        <p class="intro">
+          Digital design and web development professional with over 3 years of experience in project management, digital content creation, website maintenance, and visual communication across technology and community-focused projects.
+        </p>
+        <p>
+          Availability: Part-time employment starting in November 2027.
+        </p>
+        <a class="sns" href="https://github.com/yokomac">Github</a>
+        <a class="sns" href="https://www.linkedin.com/in/takuto-yokomaku-4873b0277/">LinkedIn</a>
+        <a class="sns" href="https://www.facebook.com/share/1RCKF3UEY8/">Facebook</a>
+      </div>
+    </section>
+
+    <section id="about">
+      <h1 class="about">About Me</h1>
+      <p>
+        My journey into technology began with design and an ambition to create meaningful value through innovation.
+      </p>
+      <p>
+        After graduating from university, where I focused primarily on graphic design and branding, I joined a startup company in Nagoya, Japan.
+        Working in a dynamic startup environment gave me the opportunity to experience the entrepreneurial mindset firsthand and gain exposure to the startup ecosystem, business development, and cross-industry collaboration.
+      </p>
+      <p>
+        Through my work, I came to appreciate how ideas, technology, and people can come together to create new opportunities.
+        This experience gradually shaped my ambition to challenge myself beyond Japan and become part of the North American technology market while I was still in my twenties.
+      </p>
+      <p>
+        With that goal in mind, I made the decision to move to Vancouver, Canada, on my own to pursue further studies in full-stack web development.
+      </p>
+      <p>
+        Today, I am building on my creative background by developing technical skills in front-end and back-end development.
+        I believe that my foundation in branding, visual communication, and design, combined with my growing technical expertise and startup experience, allows me to approach challenges from both creative and practical perspectives.
+      </p>
+      <p>
+        My goal is to bridge design, business, and technology — contributing to innovative products, meaningful digital experiences, and ambitious teams within the tech industry.
+      </p>
+
+      <h3 class="about">Education</h3>
+      <p>
+        Web Development Diploma |
+        Cornerstone Community College | Vancouver, Canada
+      </p>
+      <p class="tag">Nov 2026 - Present</p>
+      <p>Bachelor of Design and Craft | Aichi Prefectural University of Art | Nagakute, Japan</p>
+      <p class="tag">	Apr 2018 – Mar 2022</p>
+    </section>
+
+    <section id="skills">
+      <h1 class="skills">Skills</h1>
+        <div class="skills-container">
+          <ul class="skillList">
+            <li class="category">
+              Frontend Languages
+              <ul class="innerList">
+                <li>
+                  <img src="./images/html-icon.svg" alt="html-icon" class="icon">
+                  HTML
+                </li>
+                <li>
+                  <img src="./images/css-icon.svg" alt="css-icon" class="icon">
+                  CSS
+                </li>
+                <li>
+                  <img src="./images/javascript-icon.svg" alt="javascript-icon" class="icon">
+                  Javascript
+                </li>
+                <li>
+                  <img src="./images/typescript-icon.svg" alt="typescript-icon" class="icon">
+                  TypeScript
+                </li>
+              </ul>
+            </li>
+            <li class="category">
+            Backend Languages
+            <ul class="innerList">
+              <li>
+                <img src="./images/node-js-icon.svg" alt="nodejs-icon" class="icon">
+                Node.js
+              </li>
+              <li>
+                <img src="./images/postgresql-icon.svg" alt="postgresql-icon" class="icon">
+                PostgreSQL
+              </li>
+              <li>
+                <img src="./images/mongodb-icon.svg" alt="mogodb-icon" class="icon">
+                MongoDB
+              </li>
+            </ul>
+          </li>
+          <li class="category">
+            Frameworks
+            <ul class="innerList">
+              <li>
+                <img src="./images/react-js-icon.svg" alt="react-icon" class="icon">
+                React.js
+              </li>
+              <li>
+                <img src="./images/nextjs-icon.svg" alt="nextjs-icon" class="icon">
+                Next.js
+              </li>
+              <li>
+                <img src="./images/tailwind-css-icon.svg" alt="tailwindcss-icon" class="icon">
+                Tailwind CSS
+              </li>
+              <li>
+                <img src="./images/bootstrap-5-logo-icon.svg" alt="bootstrap-icon" class="icon">
+                Bootstrap
+              </li>
+            </ul>
+          </li>
+          <li class="category">
+            Tools
+            <ul class="innerList">
+              <li>
+                <img src="./images/github-icon.svg" alt="github-icon" class="icon" for="theme-icon">
+                GitHub
+              </li>
+              <li>
+                <img src="./images/npm-icon.svg" alt="npm-icon" class="icon">
+                npm
+              </li>
+              <li>
+                <img src="./images/wordpress-icon.svg" alt="wordpress-icon" class="icon" for="theme-icon">
+                Wordpress
+              </li>
+              <li>
+                <img src="./images/adobe-illustrator-icon.svg" alt="illustrator-icon" class="icon">
+                Adobe Illustrator
+              </li>
+              <li>
+                <img src="./images/adobe-photoshop-icon.svg" alt="photoshop-icon" class="icon">
+                Adobe Photoshop
+              </li>
+              <li>
+                <img src="./images/adobe-premiere-pro-icon.svg" alt="premiere-icon" class="icon">
+                Adobe Premiere
+              </li>
+              <li>
+                <img src="./images/figma-icon.svg" alt="figma-icon" class="icon">
+                Figma
+              </li>
+              <li>
+                <img src="./images/docker-icon.svg" alt="docker-icon" class="icon">
+                Docker
+              </li>
+              <li>
+                <img src="./images/google-firebase-icon.svg" alt="firebase-icon" class="icon">
+                Firebase
+              </li>
+              <li>
+                <img src="./images/vercel-icon.svg" alt="vercel-icon" class="icon" for="theme-icon">
+                Vercel
+              </li>
+            </ul>
+          </li>
+          <li class="category">
+            Design Concepts
+            <ul class="innerList">
+              <li>
+                <img src="./images/system-design.svg" alt="system-design-icon" class="icon" for="theme-icon">
+                System Design
+              </li>
+              <li>
+                <img src="./images/website-structure-icon.svg" alt="data-structure-icon" class="icon" for="theme-icon">
+                Data Structures & Algorithms
+              </li>
+              <li>
+                <img src="./images/website-layout-icon.svg" alt="uiux-icon" class="icon" for="theme-icon">
+                UI&UX
+              </li>
+              <li>
+                <img src="./images/microservice-icon.svg" alt="microservices-icon" class="icon" for="theme-icon">
+                Microservices
+              </li>
+              <li>
+                <img src="./images/lock-icon.svg" alt="security-icon" class="icon" for="theme-icon">
+                Security
+              </li>
+              <li>
+                <img src="./images/magic-icon.svg" alt="visual-communication-icon" class="icon" for="theme-icon">
+                Visual Communication
+              </li>
+              <li>
+                <img src="./images/database-remove-icon.svg" alt="severless-icon" class="icon" for="theme-icon">
+                Severless
+              </li>
+            </ul>
+          </li>
+          <li class="category">
+            Project Management
+            <ul class="innerList">
+              <li>
+                <img src="./images/customizable-icon.svg" alt="maintenance-icon" class="icon" for="theme-icon">
+                Website Maintenance
+              </li>
+              <li>
+                <img src="./images/replace-icon.svg" alt="version-control-icon" class="icon" for="theme-icon">
+                Version Control
+              </li>
+              <li>
+                <img src="./images/handshake-icon.svg" alt="collaboration-icon" class="icon" for="theme-icon">
+                Cross-functional Collaboration
+            </li>
+            <li>
+              <img src="./images/project-icon.svg" alt="coordination-icon" class="icon" for="theme-icon">
+              Project Coordination
+            </li> 
+          </ul>
+        </li>
+      </div>
+    </section>
+
+    <section id="works">
+      <h1 class="works">Works Experiences</h1>
+      <dl class="accordion">
+        <div class="timeline-item">
+          <input type="checkbox" id="acc-1" class="accordion-checkbox">
+
+          <div class="timeline-left">
+            <div class="timeline-media">
+              <img src="./images/lab.jpg" alt="Toyota-picture" class="workImg">
+              <h3>Toyota Motor Corporation | Japan</h3>
+            </div>
+          </div>
+
+          <div class="timeline-content-wrapper">
+            <dt>
+              <label for="acc-1">
+                <h2>Data Engineer & Patent Searcher</h2>
+                <span class="tag">Jan 2026 – Mar 2026</span>
+                <p><i>
+                  Global automotive leader providing advanced mobility solutions, vehicles, and sustainable transportation systems worldwide.
+                </i></p>
+              </label>
+            </dt>
+            <dd>
+              <div class="content">
+                <b>Designed and implemented a structured research data storage environment</b> using Python and AI principles, enabling efficient data analysis and seamless reuse across projects.
+              </div>
+            </dd>
+            <dd>
+              <div class="content">
+                Architected data management workflows based on data-driven science principles, streamlining data accessibility and optimizing processing speed for research teams.
+              </div>
+            </dd>
+            <dd>
+              <div class="content">
+                Executed patent research and technical landscape analysis, delivering key IP insights to directly support ongoing research and technology development.
+              </div>
+            </dd>
+            <dd>
+              <div class="content">
+                Analyzed competitive patent data and technological trends, mitigating IP risks and informing strategic decision-making for core engineering projects.
+              </div>
+            </dd>
+          </div>
+
+        </div>
+
+        <div class="timeline-item">
+          <input type="checkbox" id="acc-2" class="accordion-checkbox">
+          <div class="timeline-left">
+            <div class="timeline-media">
+              <img src="./images/share-office.jpg" alt="Kachinode-picture" class="working">
+              <h3>Kachinode Inc.  | Japan</h3>
+            </div>
+          </div>
+
+          <div class="timeline-content-wrapper">
+            <dt>
+              <label for="acc-2">
+                <h2>Share Office Manager</h2>
+                <span class="tag">Jul 2025 - Dec 2025</span>
+                <p><i>
+                  Venture company delivering tech services and events to grow Nagoya's startup ecosystem.
+                </i></p>
+              </label>
+            </dt>
+            <dd>
+              <div class="content">
+                Rejoined the organization as Shared Office Space Manager, selected by executive leadership based on a strong track record of high-value client relations and community trust.
+              </div>
+            </dd>
+            <dd>
+              <div class="content">
+                Managed end-to-end facility operations and client relations across a six-month tenure, strengthening cross-company communication and resolving operational issues efficiently.
+              </div>
+            </dd>
+            <dd>
+              <div class="content">
+                Fostered professional relations with resident companies, serving as the key point of contact to drive client satisfaction, business networking, and long-term retention.
+              </div>
+            </dd>
+            <dd>
+              <div class="content">
+                Utilized client relations and problem-solving skills to oversee daily space management, maintain optimal workplace standards, and facilitate seamless business interactions.
+              </div>
+            </dd>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <input type="checkbox" id="acc-3" class="accordion-checkbox">
+          <div class="timeline-left">
+            <div class="timeline-media">
+              <img src="./images/project-management.jpg" alt="Kachinode-picture2" class="workImg">
+              <h3>Kachinode Inc. | Japan</h3>
+            </div>
+          </div>
+                
+          <div class="timeline-content-wrapper">
+            <dt>
+              <label for="acc-3">
+                <h2>Designer & Project Manager</h2>
+                <span class="tag">Apr 2022 – Mar 2025</span>
+                <p><i>
+                  Venture company delivering tech services and events to grow Nagoya's startup ecosystem.
+                </i></p>
+              </label>
+            </dt>
+            <dd>
+              <div class="content">
+                Produced over 30 design projects annually using Adobe Photoshop and Illustrator, creating high-impact website illustrations and DTP layouts for flyers and marketing materials.
+              </div>
+            </dd>
+            <dd>
+              <div class="content">
+                Designed cross-media branding and promotional materials spanning digital and print formats, while expanding responsibilities to include website design and asset delivery.
+              </div>
+            </dd>
+            <dd>
+              <div class="content">
+                Led end-to-end project management for a 3-year collaborative industry-academia-government regional redevelopment initiative, overseeing comprehensive budget and schedule tracking.
+              </div>
+            </dd>
+            <dd>
+              <div class="content">
+                Spearheaded digital content distribution across YouTube, social media platforms, and official websites to promote civic activities, successfully driving 30–50 new community members per year.
+              </div>
+            </dd>
+            <dd>
+              <div class="content">
+                Directed multi-channel web project management and visual campaigns, leveraging graphic design, desktop publishing, and digital marketing skills to achieve key project milestones.
+              </div>
+            </dd>
+          </div>
+        </div>
+      </dl>
+    </section>
+
+    <section id="projects">
+      <h1 class="projects">Projects</h1>
+      <div class="grid-container">
+        <!-- Project Card 1 -->
+        <article class="project-card">
+          <div class="card-image">
+            <a href="https://35project.com/">
+              <img src="./images/sango-project.png" class="thumbnail" alt="sango-project-thumbnail">
+            </a>
+          </div>
+          <div class="card-content">
+            <div class="tag-container">
+              <span class="tag">WordPress</span>
+              <span class="tag">HTML & CSS</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">Editorial Design</span>
+              <span class="tag">Website Maintenance</span>
+              <span class="tag">Project Coordination</span>
+            </div>
+            <h3>35 Project WordPress Website</h3>
+            <p>
+              I have managed this website from 2022 to 2025 in Japan. I regulary updated the web Project Coordinationsite to reflect the progress of the station's redevelopment and local community activities.
+            </p>
+          </div>
+        </article>
+
+        <!-- Project Card 2 -->
+        <article class="project-card">
+          <div class="card-image">
+            <a href="https://16entrepreneurs.kachinode.com/">
+              <img src="./images/entre16.jpg" class="thumbnail" alt="16-entrepreneurs-thumbnail">
+            </a>
+          </div>
+          <div class="card-content">
+            <div class="tag-container">
+              <span class="tag">Next.js</span>
+              <span class="tag">Graphic Design</span>
+              <span class="tag">illustration</span>
+            </div>
+            <h3>16 Entrepreneur Assessment</h3>
+            <p>
+              I created an "Entrepreneur Personality Test" modeled after the MBTI (16 Personalities) assessment.
+            </p>
+          </div>
+        </article>
+
+        <!-- Project Card 3 -->
+        <article class="project-card">
+          <div class="card-image">
+            <a href="https://yokomac.vercel.app/">
+              <img src="./images/knight.png" class="thumbnail" alt="blog-site-thumbnail">
+            </a>
+          </div>
+          <div class="card-content">
+            <span class="tag">TypeScript</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Next.js</span>
+            <span class="tag">Vercel</span>
+            <span class="tag">Tailwind CSS</span>
+            <h3>Minimal Blog Site</h3>
+            <p>
+              I created a simple blog site with portfolo.
+            </p>
+          </div>
+        </article>
+
+        <!-- Project Card 4 -->
+        <article class="project-card">
+          <div class="card-image">
+            <a href="https://yokomac.vercel.app/">
+              <img src="./images/logo_ridevision.jpg" class="thumbnail" alt="logo_ridevision-thumbnail">
+            </a>
+          </div>
+          <div class="card-content">
+            <span class="tag">Logo Design</span>
+            <h3>Mobility Logo Design</h3>
+            <p>
+              I created a logo for XR services of Venture company in Japan.
+            </p>
+          </div>
+        </article>
+
+        <!-- Project Card 5 -->
+        <article class="project-card">
+          <div class="card-image">
+            <a href="https://yokomac.vercel.app/">
+              <img src="./images/logo_centpitch.png" class="thumbnail" alt="logo_centpitch-thumbnail">
+            </a>
+          </div>
+          <div class="card-content">
+            <span class="tag">Logo Design</span>
+            <h3>Pitch Event Logo Design</h3>
+            <p>
+              I created a logo design for monthly pitch event in Japan.
+            </p>
+          </div>
+        </article>
+        
+        <!-- Project Card 6 -->
+        <article class="project-card">
+          <div class="card-image">
+            <a href="https://yokomac.vercel.app/">
+              <img src="./images/logo_dilmo.png" class="thumbnail" alt="logo_dilmo-thumbnail">
+            </a>
+          </div>
+          <div class="card-content">
+            <span class="tag">Logo Design</span>
+            <h3>Pitch Event Logo Design</h3>
+            <p>
+              I created a logo design for new mobility planning in Japan.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+    
+    <section id="contact">
+      <h1 class="contact">Contact</h1>
+      <div class="container">
+        <form action="action_page.php">
+          <div class="contact-container">
+            <div>
+              <label for="fname">Full Name</label>
+              <input type="text" id="fname" name="fullname" placeholder="Your full  name..">
+            </div>
+            <div>
+              <label for="fname">Email Address</label>
+              <input type="text" id="email" name="email" placeholder="you@email.com">
+            </div>
+          </div>
+          <div class="contact-container">
+            <div>
+              <label for="fname">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="What are we making?">
+            </div>
+            <div>
+              <label for="country">Country</label>
+              <select id="country" name="country">
+                <option value="australia">Australia</option>
+                <option value="canada">Canada</option>
+                <option value="usa">USA</option>
+                <option value="japan">Japan</option>
+                <option value="india">India</option>
+              </select>
+            </div>
+          </div>
+          <div class="contact-container">
+            <label for="Message">Message</label>
+          </div>
+          <textarea id="message" name="subject" placeholder="Write something.."></textarea>
+
+          <input type="submit" class="submit" value="Submit">
+          </p>
+        </form>
+        <p>
+            Submit above form or shoot me a email directly on 
+            <a class="myEmail" href="mailto:yokomaku.connecta@gmail.com">
+              yokomaku.connecta@gmail.com
+            </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footerSns">
+      <a class="sns" href="https://github.com/yokomac" target="_blank" rel="noopener noreferrer">
+        Github
+      </a>
+      <a class="sns" href="https://www.linkedin.com/in/takuto-yokomaku-4873b0277/" target="_blank" rel="noopener noreferrer">
+        LinkedIn
+      </a>
+      <a class="sns" href="https://www.facebook.com/share/1RCKF3UEY8/">
+        Facebook
+      </a>
+      <a class="sns" href="https://bsky.app/profile/yokomac.bsky.social">
+        Bluesky
+    </div>
+    </a>
+    <p>
+      Design & Developed by Takuto Yokomaku
+    </p>
+  </footer>
 </body>
 </html>
