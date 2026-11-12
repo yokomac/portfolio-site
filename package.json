@@ -4,10 +4,9 @@
   "description": "This is my first portfolio site.",
   "main": "script.js",
   "scripts": {
-    "test": "concurrently -n \"sass,server\" -c \"cyan,magenta\" \"npm run sass\" \"npm run server\"",
-    "sass": "sass --watch scss:css",
+    "sass": "sass --watch src/scss/styles.scss:src/css/styles.css",
     "server": "npx five-server --open=index.html",
-    "dev": "live-server ."
+    "dev": "concurrently -n \"sass,server\" -c \"cyan,magenta\" \"npm run sass\" \"npm run server\""
   },
   "repository": {
     "type": "git",
