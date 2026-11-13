@@ -294,8 +294,12 @@ header nav a,
   }
 }
 
-.icon {
+.icon, .icon-mono {
   width: 18px;
+}
+
+[data-theme="dark"] .icon-mono {
+  filter: invert(1);
 }
 
 .works {

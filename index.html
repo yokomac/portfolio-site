@@ -193,7 +193,7 @@
                 npm
               </li>
               <li>
-                <img src="./src/images/wordpress-icon.svg" alt="wordpress-icon" class="icon" for="theme-icon">
+                <img src="./src/images/wordpress-icon.svg" alt="wordpress-icon" class="icon-mono" for="theme-icon">
                 Wordpress
               </li>
               <li>
@@ -221,7 +221,7 @@
                 Firebase
               </li>
               <li>
-                <img src="./src/images/vercel-icon.svg" alt="vercel-icon" class="icon" for="theme-icon">
+                <img src="./src/images/vercel-icon.svg" alt="vercel-icon" class="icon-mono" for="theme-icon">
                 Vercel
               </li>
             </ul>
@@ -230,31 +230,31 @@
             Design Concepts
             <ul class="innerList">
               <li>
-                <img src="./src/images/system-design.svg" alt="system-design-icon" class="icon" for="theme-icon">
+                <img src="./src/images/system-design.svg" alt="system-design-icon" class="icon-mono" for="theme-icon">
                 System Design
               </li>
               <li>
-                <img src="./src/images/website-structure-icon.svg" alt="data-structure-icon" class="icon" for="theme-icon">
+                <img src="./src/images/website-structure-icon.svg" alt="data-structure-icon" class="icon-mono" for="theme-icon">
                 Data Structures & Algorithms
               </li>
               <li>
-                <img src="./src/images/website-layout-icon.svg" alt="uiux-icon" class="icon" for="theme-icon">
+                <img src="./src/images/website-layout-icon.svg" alt="uiux-icon" class="icon-mono" for="theme-icon">
                 UI&UX
               </li>
               <li>
-                <img src="./src/images/microservice-icon.svg" alt="microservices-icon" class="icon" for="theme-icon">
+                <img src="./src/images/microservice-icon.svg" alt="microservices-icon" class="icon-mono" for="theme-icon">
                 Microservices
               </li>
               <li>
-                <img src="./src/images/lock-icon.svg" alt="security-icon" class="icon" for="theme-icon">
+                <img src="./src/images/lock-icon.svg" alt="security-icon" class="icon-mono" for="theme-icon">
                 Security
               </li>
               <li>
-                <img src="./src/images/magic-icon.svg" alt="visual-communication-icon" class="icon" for="theme-icon">
+                <img src="./src/images/magic-icon.svg" alt="visual-communication-icon" class="icon-mono" for="theme-icon">
                 Visual Communication
               </li>
               <li>
-                <img src="./src/images/database-remove-icon.svg" alt="severless-icon" class="icon" for="theme-icon">
+                <img src="./src/images/database-remove-icon.svg" alt="severless-icon" class="icon-mono" for="theme-icon">
                 Severless
               </li>
             </ul>
@@ -263,19 +263,19 @@
             Project Management
             <ul class="innerList">
               <li>
-                <img src="./src/images/customizable-icon.svg" alt="maintenance-icon" class="icon" for="theme-icon">
+                <img src="./src/images/customizable-icon.svg" alt="maintenance-icon" class="icon-mono" for="theme-icon">
                 Website Maintenance
               </li>
               <li>
-                <img src="./src/images/replace-icon.svg" alt="version-control-icon" class="icon" for="theme-icon">
+                <img src="./src/images/replace-icon.svg" alt="version-control-icon" class="icon-mono" for="theme-icon">
                 Version Control
               </li>
               <li>
-                <img src="./src/images/handshake-icon.svg" alt="collaboration-icon" class="icon" for="theme-icon">
+                <img src="./src/images/handshake-icon.svg" alt="collaboration-icon" class="icon-mono" for="theme-icon">
                 Cross-functional Collaboration
             </li>
             <li>
-              <img src="./src/images/project-icon.svg" alt="coordination-icon" class="icon" for="theme-icon">
+              <img src="./src/images/project-icon.svg" alt="coordination-icon" class="icon-mono" for="theme-icon">
               Project Coordination
             </li> 
           </ul>
@@ -559,25 +559,25 @@
     <section id="contact" class="reveal">
       <h1 class="contact">Contact</h1>
       <div class="container">
-        <form action="action_page.php">
+        <form name="contact" method="POST" data-netlify="true">
           <div class="contact-container">
             <div>
-              <label for="fname">Full Name</label>
-              <input type="text" id="fname" name="fullname" placeholder="Your full  name..">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="Your full  name..">
             </div>
             <div>
-              <label for="fname">Email Address</label>
-              <input type="text" id="email" name="email" placeholder="you@email.com">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="you@email.com">
             </div>
           </div>
           <div class="contact-container">
             <div>
-              <label for="fname">Subject</label>
+              <label for="subject">Subject</label>
               <input type="text" id="subject" name="subject" placeholder="What are we making?">
             </div>
             <div>
               <label for="country">Country</label>
-              <select id="country" name="country">
+              <select id="country" name="country[]">
                 <option value="australia">Australia</option>
                 <option value="canada">Canada</option>
                 <option value="usa">USA</option>
@@ -587,11 +587,11 @@
             </div>
           </div>
           <div class="contact-container">
-            <label for="Message">Message</label>
+            <label for="message">Message</label>
           </div>
-          <textarea id="message" name="subject" placeholder="Write something.."></textarea>
+          <textarea id="message" name="message" placeholder="Write something.."></textarea>
 
-          <input type="submit" class="submit" value="Submit">
+          <input type="submit" class="submit" value="submit">
           </p>
         </form>
         <p>
