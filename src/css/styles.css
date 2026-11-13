@@ -418,8 +418,12 @@ header nav a:hover,
   margin-right: 20px;
 }
 
-.icon {
+.icon, .icon-mono {
   width: 18px;
+}
+
+[data-theme=dark] .icon-mono {
+  filter: invert(1);
 }
 
 .works {
